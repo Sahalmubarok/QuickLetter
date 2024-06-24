@@ -4,8 +4,6 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Navbar() {
   return (
@@ -28,7 +26,7 @@ export default function Navbar() {
             Quick Latter
           </Typography>
           <Button sx={{ backgroundColor: "black", ":hover": { bgcolor: "rgb(0, 0, 0, 0.5)" } }} color="inherit">
-            Login
+            Donasi
           </Button>
         </Toolbar>
       </AppBar>

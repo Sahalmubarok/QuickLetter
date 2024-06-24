@@ -1,5 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 
 const Home = () => {
   return (
@@ -28,7 +28,6 @@ const Home = () => {
               width: "200px",
               color: "black",
             }}
-            
           >
             Start writing a letter
           </Button>
