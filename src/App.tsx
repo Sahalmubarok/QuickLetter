@@ -1,10 +1,18 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import DetailLetter from "./pages/DetailLetter";
+import Form from "./pages/Form";
 
 function App() {
   return (
-    <>
-      <h1>Start</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/form" element={<Form/>}/>
+        <Route path="/detailLetter" element={<DetailLetter/>}/>
+      </Routes>
+    </Router>
   );
 }
 
