@@ -11,7 +11,13 @@ const Form = () => {
   return (
     <>
       <Navbar />
-      <Box mt={"120px"} display={"flex"} flexDirection={"column"} height={"100vh"}>
+      <Box
+        mt={"120px"}
+        mx={"20px"}
+        display={"flex"}
+        flexDirection={"column"}
+        height={"100vh"}
+      >
         <Box
           display={"flex"}
           justifyContent={"center"}
@@ -22,7 +28,7 @@ const Form = () => {
           <Typography color={"white"}>ISI SURAT</Typography>
         </Box>
         <Box display={"flex"}>
-          <Box width={"50%"}>
+          <Box width={"50%"} display={"flex"} flexDirection={"column"} gap={2}>
             <Box>
               <LetterHead />
             </Box>
