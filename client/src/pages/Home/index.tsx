@@ -32,6 +32,7 @@ const Home = () => {
               ":hover": { bgcolor: "rgb(0, 0, 0, 0.5)" },
               width: "200px",
               color: "black",
+              fontSize: "12px",
             }}
           >
             Start writing a letter

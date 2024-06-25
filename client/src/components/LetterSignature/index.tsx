@@ -1,6 +1,6 @@
 import { DatePicker } from "@mui/lab";
 import { Box, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const LetterSignature = () => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(null); // Tipe state selectedDate disesuaikan dengan Date atau null
@@ -10,11 +10,13 @@ const LetterSignature = () => {
     };
   return (
     <Box>
-      <Box display={"flex"} marginTop={2}>
+      <Box mb={"20px"}  display={"flex"} marginTop={2}>
         <Box
           width={"100%"}
+          bgcolor={"white"}
           border={"#d3d3d3 1px solid"}
           borderRadius={2}
+          boxShadow={"rgba(0, 0, 0, 0.5) 0px 3px 8px"}
           padding={2}
         >
           <Typography
@@ -28,6 +30,7 @@ const LetterSignature = () => {
           <Box>
             <Box marginBottom={1}>
               <Typography fontSize={16}>Date</Typography>
+              <TextField type="date" />
               <DatePicker
                 value={selectedDate}
                 onChange={handleDateChange}

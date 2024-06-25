@@ -1,11 +1,17 @@
 import { Box, TextField, Typography } from "@mui/material";
-import React from "react";
 
 const LetterOfStatement = () => {
   return (
     <Box>
       <Box display={"flex"} marginTop={2}>
-        <Box width={"100%"} border={"#d3d3d3 1px solid"} borderRadius={2} padding={2}>
+        <Box
+          width={"100%"}
+          border={"#d3d3d3 1px solid"}
+          borderRadius={2}
+          padding={2}
+          bgcolor={"white"}
+          boxShadow={"rgba(0, 0, 0, 0.5) 0px 3px 8px"}
+        >
           <Typography
             fontWeight={"bold"}
             marginBottom={1}
