@@ -1,7 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
 import Navbar from "../../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <Navbar />
@@ -22,6 +26,7 @@ const Home = () => {
             features flagship of Quick Latter. <br /> Free, Easy and Fast!
           </Typography>
           <Button
+          onClick={() => navigate("/form")}
             sx={{
               backgroundColor: "orange",
               ":hover": { bgcolor: "rgb(0, 0, 0, 0.5)" },
