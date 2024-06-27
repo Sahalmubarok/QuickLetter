@@ -5,6 +5,7 @@ import LetterRecipientAddres from "../../components/LetterRecipientAddres";
 import LetterContent from "../../components/LetterContent";
 import LetterSignature from "../../components/LetterSignature";
 import Navbar from "../../components/Navbar";
+import { useState } from "react";
 
 const Form = () => {
   return (
@@ -23,7 +24,7 @@ const Form = () => {
           width={"100%"}
           height={"10vh"}
         >
-          <Typography color={"white"} fontSize={30} fontWeight={"bold"} >
+          <Typography color={"white"} fontSize={30} fontWeight={"bold"}>
             LETTER
           </Typography>
         </Box>

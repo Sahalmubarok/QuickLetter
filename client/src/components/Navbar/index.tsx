@@ -4,16 +4,16 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.png";
-import { Avatar } from "@mui/material";
 
 export default function Navbar() {
   const navigate = useNavigate();
-
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ width: "100%" }}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+      <AppBar 
+        position="fixed"
+        // sx={{ top: "20px", left: "20px", right: "20px", width: "auto" }}
+      >
+        <Toolbar >
           {/* <IconButton
             size="large"
             edge="start"
@@ -23,22 +23,15 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Box>
-            <Avatar
-              src={Logo}
-              alt=""
-              sx={{ width: "160px", height: "70px" }}
-              onClick={() => navigate("/")}
-            />
-            {/* <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1 }}
-              onClick={() => navigate("/")}
-            >
-              Quick Latter
-            </Typography> */}
-          </Box>
+          <Typography
+            onClick={() => navigate("/")}
+            variant="h6"
+            component="div"
+            
+            sx={{ flexGrow: 1, cursor: "pointer" }}
+          >
+            Quick Latter
+          </Typography>
           <Button
             sx={{
               backgroundColor: "black",
