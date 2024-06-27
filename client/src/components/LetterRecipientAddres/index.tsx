@@ -1,6 +1,13 @@
 import { Box, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
 const LetterRecipientAddres = () => {
+  const [letterRecipientAddres, setLetterRecipientAddres] = useState({
+    name: "",
+    addres: ""
+  });
+  console.log(letterRecipientAddres);
+  
   return (
     <Box>
       <Box display={"flex"} marginTop={2}>
@@ -8,7 +15,7 @@ const LetterRecipientAddres = () => {
           width={"100%"}
           border={"#d3d3d3 1px solid"}
           borderRadius={2}
-          padding={2}
+          padding={4}
           bgcolor={"white"}
           boxShadow={"rgba(0, 0, 0, 0.5) 0px 3px 8px"}
         >
@@ -16,18 +23,27 @@ const LetterRecipientAddres = () => {
             fontWeight={"bold"}
             marginBottom={1}
             fontSize={23}
-            marginTop={"15px"}
           >
             RECIPIENT ADDRES
           </Typography>
-          <Box>
-            <Box>
+          <Box width={"100%"} display={"flex"}>
+            <Box width={"50%"}>
               <Typography fontSize={16}>Name</Typography>
-              <TextField size="small"></TextField>
+              <TextField
+                size="small"
+                placeholder="ex: Muhamad Zain Nafis"
+                onChange={(e) => setLetterRecipientAddres({...letterRecipientAddres, name: e.target.value})}
+                sx={{ width: "100%" }}
+              ></TextField>
             </Box>
-            <Box marginTop={1}>
+            <Box width={"50%"} ml={"15px"}>
               <Typography fontSize={16}>Addres</Typography>
-              <TextField size="small"></TextField>
+              <TextField
+                size="small"
+                placeholder="ex: Jakarta"
+                onChange={(e) => setLetterRecipientAddres({...letterRecipientAddres, addres: e.target.value})}
+                sx={{ width: "100%" }}
+              ></TextField>
             </Box>
           </Box>
         </Box>
