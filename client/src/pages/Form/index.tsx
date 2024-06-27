@@ -11,7 +11,7 @@ const Form = () => {
     <>
       <Navbar />
       <Box
-        mt={"120px"}
+        mt={"90px"}
         mx={"20px"}
         display={"flex"}
         flexDirection={"column"}
@@ -22,12 +22,13 @@ const Form = () => {
           justifyContent={"center"}
           width={"100%"}
           height={"10vh"}
-          sx={{ backgroundColor: "gray" }}
         >
-          <Typography color={"white"}>ISI SURAT</Typography>
+          <Typography color={"white"} fontSize={30} fontWeight={"bold"} >
+            LETTER
+          </Typography>
         </Box>
-        <Box display={"flex"}>
-          <Box width={"50%"} display={"flex"} flexDirection={"column"} gap={2}>
+        <Box display={"flex"} justifyContent={"center"}>
+          <Box width={"80%"} display={"flex"} flexDirection={"column"} gap={2}>
             <Box>
               <LetterHead />
             </Box>
@@ -43,9 +44,6 @@ const Form = () => {
             <Box>
               <LetterSignature />
             </Box>
-          </Box>
-          <Box width={"50%"}>
-            <Typography></Typography>
           </Box>
         </Box>
       </Box>
