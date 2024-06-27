@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model LetterHead {
+  id              String            @id @unique @default(cuid())
+  logo            String?
+  company_name    String?
+  phone_number    String?
+  email           String?
+  address         String?
+  LetterTemplate1 LetterTemplate1[]
+}
+
+model Statement {
+  id               String            @id @unique @default(cuid())
+  referance_number String?
+  attachment       String?
+  subject          String?
+  LetterTemplate1  LetterTemplate1[]
+}
+
+model RecipientAddress {
+  id              String            @id @unique @default(cuid())
+  name            String?
+  addres          String?
+  LetterTemplate1 LetterTemplate1[]
+}
+
+model Content {
+  id              String            @id @unique @default(cuid())
+  opening         String?
+  content         String?
+  closing         String?
+  LetterTemplate1 LetterTemplate1[]
+}
+
+model Signature {
+  id              String            @id @unique @default(cuid())
+  city_name       String?
+  logo            String?
+  date            String?
+  name            String?
+  LetterTemplate1 LetterTemplate1[]
+}
+
+model LetterTemplate1 {
+  id                 String            @id @unique @default(cuid())
+  letterHead         LetterHead?       @relation(fields: [letterHeadId], references: [id])
+  statement          Statement?        @relation(fields: [statementId], references: [id])
+  recipentAddress    RecipientAddress? @relation(fields: [recipientAddressId], references: [id])
+  content            Content?          @relation(fields: [contentId], references: [id])
+  signature          Signature?        @relation(fields: [signatureId], references: [id])
+  letterHeadId       String?
+  statementId        String?
+  recipientAddressId String?
+  contentId          String?
+  signatureId        String?
+}
