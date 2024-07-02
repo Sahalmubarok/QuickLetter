@@ -71,7 +71,7 @@ const LetterSignature = () => {
               ></TextField>
             </Box>
             <Box width={"100%"} display={"flex"} mt={2}>
-              <Box width={"25%"}>
+              <Box width={"20%"}>
                 <Box>
                   <Typography fontSize={16}>Logo (png)</Typography>
                   <Box
@@ -112,7 +112,7 @@ const LetterSignature = () => {
                   />
                 </Box>
               </Box>
-              <Box width={"75%"} ml={3}>
+              <Box width={"80%"} ml={3}>
                 <Box marginBottom={2}>
                   <Typography fontSize={16}>Date</Typography>
                   <TextField

@@ -1,11 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import LetterHead from "../../components/LetterHead";
 import LetterOfStatement from "../../components/LetterOfStatement";
 import LetterRecipientAddres from "../../components/LetterRecipientAddres";
 import LetterContent from "../../components/LetterContent";
 import LetterSignature from "../../components/LetterSignature";
 import Navbar from "../../components/Navbar";
-import { useState } from "react";
+import LetterHead from "../../components/LetterHead";
 
 const Form = () => {
   return (
@@ -31,19 +30,7 @@ const Form = () => {
         <Box display={"flex"} justifyContent={"center"}>
           <Box width={"80%"} display={"flex"} flexDirection={"column"} gap={2}>
             <Box>
-              <LetterHead />
-            </Box>
-            <Box>
-              <LetterOfStatement />
-            </Box>
-            <Box>
-              <LetterRecipientAddres />
-            </Box>
-            <Box>
-              <LetterContent />
-            </Box>
-            <Box>
-              <LetterSignature />
+              <LetterHead/>
             </Box>
           </Box>
         </Box>
